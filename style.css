@@ -1,0 +1,89 @@
+html {
+    font-size: 62, 5%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #E9ECF8;
+    width: 100%;
+}
+
+.caja {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    margin: 3rem 0;
+}
+
+.texto-encriptar {
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+textarea.texto-encriptar {
+    background-color: transparent;
+    color: #0A3871;
+}
+
+div.texto-encriptar {
+    padding: 3rem 0;
+    height: auto;
+    background-color: #fff;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    margin: 3rem auto;
+    -webkit-box-shadow: -11px 32px 50px -23px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: -11px 32px 50px -23px rgba(0, 0, 0, 0.42);
+    box-shadow: -11px 32px 50px -23px rgba(0, 0, 0, 0.42);
+}
+
+.texto-encriptar span {
+    font-weight: bold;
+    margin-bottom: 2rem;
+    line-height: 1rem;
+}
+
+.indicasiones {
+    width: 100%;
+    text-align: center;
+    color: #868E96;
+    margin: 1rem 0;
+}
+
+.btn {
+    width: 90%;
+    margin: .5rem auto;
+    display: block;
+    padding: 1rem;
+    border: 2px solid #0A3871;
+    background-color: transparent;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    color: #0A3871;
+}
+
+.btn2 {
+    background-color: #0A3871;
+    color: #fff;
+}
+
+.oculto {
+    display: none;
+}
+
+.existe {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    margin: 1rem 0;
+}
