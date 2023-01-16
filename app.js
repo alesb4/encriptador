@@ -53,7 +53,7 @@ botonDesencriptar.addEventListener('click', function(e) {
         imagenOculta.classList.add('oculto');
 
     } else {
-        alert('No cumple los parametros para encriptar')
+        alert('No cumple los parametros para desencriptar')
     }
 
 })
