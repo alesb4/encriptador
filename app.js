@@ -64,6 +64,7 @@ botonCopiar.addEventListener('click', function(e) {
 
     navigator.clipboard.writeText(textoAreaTraduccido.textContent)
 
+    alert('Texto copiado!!')
 })
 
 
