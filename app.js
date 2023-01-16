@@ -3,6 +3,7 @@ const botonEncriptar = document.querySelector('#botonEncriptar');
 const botonDesencriptar = document.querySelector('#botonDesencriptar');
 const botonCopiar = document.querySelector('#botonCopiar');
 const textoAreaTraduccido = document.querySelector('#textoAreaTraduccido');
+const imagenOculta = document.querySelector('.imagenOculta');
 
 
 
@@ -11,19 +12,30 @@ botonEncriptar.addEventListener('click', function(e) {
     // evita que el boton envie el formulario y se recargue la pagina
     e.preventDefault();
 
-    // Almacena la cadena de texto que se va a traducir
+    if (cuadroTraductor.value != '') {
+        // Almacena la cadena de texto que se va a traducir
 
-    let textoSinTraduccir = cuadroTraductor.value;
+        let textoSinTraduccir = cuadroTraductor.value;
 
-    //Creo mi variable de Traduccion
-    const textoTraducido = traductor(textoSinTraduccir, 1);
+        //Creo mi variable de Traduccion
+        const textoTraducido = traductor(textoSinTraduccir, 1);
 
-    //Envio lo traduccido a mi textarea
-    textoAreaTraduccido.textContent = textoTraducido;
+        //Envio lo traduccido a mi textarea
+        textoAreaTraduccido.textContent = textoTraducido;
 
-    //Habilito el uso del boton copiar
-    botonCopiar.disabled = false;
-    botonCopiar.classList.add('existe');
+        //Habilito el uso del boton copiar
+        botonCopiar.disabled = false;
+        botonCopiar.classList.add('existe');
+
+        //ocualta la imagen
+        imagenOculta.classList.remove('imagenOculta');
+        imagenOculta.classList.add('oculto');
+    } else {
+        alert('No cumple los parametros para encriptar')
+    }
+
+
+
 
 
 })
@@ -31,11 +43,19 @@ botonEncriptar.addEventListener('click', function(e) {
 
 botonDesencriptar.addEventListener('click', function(e) {
     e.preventDefault();
-    let textoSinTraduccir = cuadroTraductor.value;
-    const textoTraducido = traductor(textoSinTraduccir, 2);
-    textoAreaTraduccido.textContent = textoTraducido;
-    botonCopiar.disabled = false;
-    botonCopiar.classList.add('existe');
+    if (cuadroTraductor.value != '') {
+        let textoSinTraduccir = cuadroTraductor.value;
+        const textoTraducido = traductor(textoSinTraduccir, 2);
+        textoAreaTraduccido.textContent = textoTraducido;
+        botonCopiar.disabled = false;
+        botonCopiar.classList.add('existe');
+        imagenOculta.classList.remove('imagenOculta');
+        imagenOculta.classList.add('oculto');
+
+    } else {
+        alert('No cumple los parametros para encriptar')
+    }
+
 })
 
 
