@@ -38,7 +38,7 @@ textarea.texto-encriptar {
 }
 
 div.texto-encriptar {
-    padding: 3rem 0;
+    padding: 3rem 0.8rem;
     height: auto;
     background-color: #fff;
     border-radius: 3rem;
