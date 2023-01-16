@@ -1,13 +1,21 @@
 html {
+    /* Corregir a los rems */
     font-size: 62, 5%;
-    width: 100%;
 }
 
 body {
+    /* Utilizar la fuente de google */
     font-family: 'Inter', sans-serif;
     background-color: #E9ECF8;
     width: 100%;
 }
+
+header {
+    margin: 3rem 0;
+}
+
+
+/* Centrar todos nuestros elementos del form */
 
 .caja {
     display: flex;
@@ -15,9 +23,8 @@ body {
     flex-direction: column;
 }
 
-header {
-    margin: 3rem 0;
-}
+
+/* Creo una clase que de caracteristicas generales*/
 
 .texto-encriptar {
     width: 90%;
@@ -28,14 +35,23 @@ header {
     text-align: center;
 }
 
+
+/* Para evitar que se foquse nuestro texarea */
+
 .texto-encriptar:focus {
     outline: none;
 }
+
+
+/* Crarcteristicas espesificas a nuestra texarea */
 
 textarea.texto-encriptar {
     background-color: transparent;
     color: #0A3871;
 }
+
+
+/* Caracteristicas especificas de nuestro contenedor de la traduccion */
 
 div.texto-encriptar {
     padding: 3rem 0.8rem;
@@ -49,19 +65,24 @@ div.texto-encriptar {
     box-shadow: -11px 32px 50px -23px rgba(0, 0, 0, 0.42);
 }
 
+
+/* Caracteristica Especifica de una parte de nuestro Texto */
+
 .texto-encriptar span {
     font-weight: bold;
     margin-bottom: 2rem;
     line-height: 1rem;
 }
 
+
+/* Oculta la imagen cuando no es requerida */
+
 .imagenOculta {
     display: none;
 }
 
-.caja-btn {
-    width: 100%;
-}
+
+/* Las caracteristicas de nuestro texto de indicasiones */
 
 .indicasiones {
     width: 100%;
@@ -69,6 +90,16 @@ div.texto-encriptar {
     color: #868E96;
     margin: 1rem 0;
 }
+
+
+/* Este es un contenedor para nuestros botones y puedan ser manipulados mas facilmente */
+
+.caja-btn {
+    width: 100%;
+}
+
+
+/* Caracteristicas Generales de los botones */
 
 .btn {
     width: 90%;
@@ -83,21 +114,33 @@ div.texto-encriptar {
     transition: .3s all;
 }
 
+
+/* Caracteristicas que se modifican en el hover */
+
 .btn:hover {
     cursor: pointer;
     background-color: #0A3871;
     color: #fff;
 }
 
+
+/* Clase que ocupo cuando tengo que ocultar elementos en pantalla*/
+
 .oculto {
     display: none;
 }
+
+
+/* Clase que ocuapo para mostar cosas en pantalla */
 
 .existe {
     display: block;
 }
 
-footer {
+
+/* Caractrtisticas del footer */
+
+.footer {
     text-align: center;
     margin: 1rem 0;
 }
@@ -106,6 +149,7 @@ footer {
 /* Media querys para adaptar el codigo a escritorio */
 
 @media screen and (min-width: 1000px) {
+    /* Caracteristicas que tomara body */
     .desktop {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -113,19 +157,27 @@ footer {
         height: calc(100vh - 4rem);
         padding: 2rem;
     }
+    /* posiciona al header */
     .header {
         grid-column: 1/4;
         height: 10%;
     }
+    /* Posiciona a main */
     .main {
         height: 75vh;
         grid-column: 1/4;
     }
+    /* Posiciona al footer*/
+    .footer {
+        grid-column: 1/5;
+    }
+    /* Ajusta el contenido */
     .caja {
         height: 100%;
         display: flex;
         justify-content: space-between;
     }
+    /* Ajusta el contenido */
     .traduccion {
         display: flex;
         height: 100%;
@@ -133,6 +185,7 @@ footer {
         grid-column: 4/5;
         grid-row: 1/3;
     }
+    /* Merjora la lectura en escritorio */
     div.texto-encriptar {
         margin: 0;
         display: flex;
@@ -141,17 +194,17 @@ footer {
         align-items: center;
         gap: 2rem;
     }
+    /* Muestra la imagen ocualta */
     .imagenOculta {
         display: block;
         width: 15rem;
     }
+    /* Junta nuestros botones */
     .caja-btn {
         display: flex;
     }
+    /* Reduce el tamaño del btn para ajustarlo a una sola linea */
     .caja-btn .btn {
         width: 45%;
-    }
-    .footer {
-        grid-column: 1/5;
     }
 }
