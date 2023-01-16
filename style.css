@@ -79,13 +79,26 @@ div.texto-encriptar {
     background-color: transparent;
     border-radius: 1rem;
     font-size: 1.1rem;
-    color: #0A3871;
+    color: #0a3871;
+    transition: .3s all;
 }
 
-.btn2 {
+.btn:hover {
+    cursor: pointer;
     background-color: #0A3871;
     color: #fff;
 }
+
+
+/* .btn2 {
+    background-color: #0A3871;
+    color: #fff;
+}
+
+.btn2:hover {
+    background-color: transparent;
+    color: #0A3871;
+} */
 
 .oculto {
     display: none;
